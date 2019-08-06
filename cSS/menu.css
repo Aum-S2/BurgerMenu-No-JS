@@ -40,6 +40,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.54s ease;
 }
 
 /* hamburger top and botton lines */
@@ -56,4 +57,16 @@
 
 .menu-wrap .hamburger > div:after {
   top: 10px;
+}
+
+/* toggler animation */
+.menu-wrap .toggler:checked + .hamburger > div {
+  transform: rotate(135deg);
+}
+
+/* lines into X */
+.menu-wrap .toggler:checked + .hamburger > div:before,
+.menu-wrap .toggler:checked + .hamburger > div:after {
+  top: 0;
+  transform: rotate(90deg);
 }
