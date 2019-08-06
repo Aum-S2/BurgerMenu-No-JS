@@ -1,7 +1,7 @@
 :root {
-  --primary-color: rgba(13, 110, 139, 0.75);
+  --primary-color: rgb(241, 107, 28, 0.48);
   --secondary-color: rgba(229, 0, 139, 0.9);
-  --primary-color: rgba(255, 121, 32, 0.87);
+  --overlay-color: rgba(255, 121, 32, 0.87);
   --menu-speed: 0.78s;
 }
 
@@ -21,4 +21,54 @@ body {
   margin: auto;
   overflow: hidden;
   padding: 0 3.2rem;
+}
+
+#showcase {
+  background: var(--primary-color);
+  color: #fff;
+  height: 100vh;
+  position: relative;
+}
+
+#showcase:before {
+  content: '';
+  background: url(/img/tree-orange.jpg) no-repeat center center/cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+#showcase .showcase-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+}
+
+#showcase h1 {
+  font-size: 3.7rem;
+}
+
+#showcase p {
+  font-size: 1.28rem;
+}
+
+.btn {
+  display: inline-block;
+  border: none;
+  text-decoration: none;
+  background: orangered;
+  color: #fff;
+  padding: 0.8rem 1.28rem;
+  margin: 1rem;
+  transition: opacity 1s ease-in-out;
+}
+
+.btn:hover {
+  opacity: 0.45;
 }
