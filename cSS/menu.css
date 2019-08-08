@@ -86,6 +86,12 @@
   transition: var(--menu-speed);
 }
 
+.menu-wrap .toggler:checked ~ .menu > div > div {
+  opacity: 1;
+  transition: opacity 0.42s ease 0.42s;
+}
+
+/* hidden */
 .menu-wrap .menu {
   position: fixed;
   top: 0;
@@ -101,9 +107,11 @@
 
 .menu-wrap .menu > div {
   background: var(--overlay-color);
+  border-radius: 50%;
   width: 200vw;
   height: 200vw;
   display: flex;
+  flex: none;
   align-items: center;
   justify-content: center;
   transform: scale(0);
